@@ -1,0 +1,75 @@
+
+/* App.css */
+.App {
+  text-align: center;
+  padding: 20px;
+  height: 100vh; /* Make the app fill the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure spacing for header, grid, and footer */
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: blue;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.card-grid {
+  display: grid;
+  gap: 10px;
+  flex-grow: 1; /* Allow the grid to grow and fill available space */
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Dynamically size columns */
+  grid-auto-rows: 1fr; /* Consistent row heights */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-height: calc(100vh - 150px); /* Ensure grid fits within viewport, leaving room for header and button */
+  padding: 10px;
+}
+
+.card-grid > div {
+  width: 100%; /* Scale cards dynamically */
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr); /* Reduce columns on smaller screens */
+    gap: 8px; /* Smaller gap */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr); /* Adjust to 4 columns for medium screens */
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(6, 1fr); /* Full layout with 6 columns */
+  }
+}
+
+p {
+  margin: 10px 0;
+  font-size: 1rem;
+}

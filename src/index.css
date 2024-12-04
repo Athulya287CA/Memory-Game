@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Itim&family=Jaro:opsz@6..72&family=Kode+Mono:wght@400..700&family=Lilita+One&family=Sriracha&display=swap');
+
+body{
+  font-family: "Jaro", sans-serif;
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  background: #1b1523;
+  color: #fff; 
+}
